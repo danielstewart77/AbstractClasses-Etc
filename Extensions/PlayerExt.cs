@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Abstraction.Models;
 
-namespace Virtual_Methods
+namespace Abstraction.Extensions
 {
 	public static class PlayerExt
 	{
@@ -14,10 +11,12 @@ namespace Virtual_Methods
 			Console.WriteLine($"Player Name: {player.Name}");
 			Console.WriteLine();
 		}
-		public static void PrintPlayerStats(this Player player)
+		public static void PrintPlayerStats(this Infantry player)
 		{
+			Console.WriteLine("__________ Player __________");
+			Console.WriteLine($"Player Name: {player.Name} Player Id: {player.Id} Player Email: {player.Email}");
 			Console.WriteLine("__________ Player Stats __________");
-			Console.WriteLine($"Player Name: {player.Name} Player Id: {player.Id} Player Power: {player.Power}");
+			Console.WriteLine($"Player Power: {player.Power} Player Level: {player.Level}");
 			Console.WriteLine();
 		}
 
@@ -27,6 +26,7 @@ namespace Virtual_Methods
 			Console.WriteLine($"Bot Name: {player.Name}");
 			Console.WriteLine($"Bot Id: {player.Id}");
 			Console.WriteLine($"Bot Power: {player.Power}");
+			Console.WriteLine($"Bot Level: {player.Level}");
 			Console.WriteLine();
 		}
 	}
