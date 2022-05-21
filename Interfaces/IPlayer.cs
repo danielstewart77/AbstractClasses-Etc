@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Virtual_Methods
+namespace Abstraction.Interfaces
 {
 	/// <summary>
-	/// All player objects have Ids and Names
+	/// All player objects have Ids, Names and Levels
 	/// </summary>
 	internal interface IPlayer
 	{
-		Guid Id { get; }
+		Guid Id { get; set; }
 		string Name { get; set; }
+		int Level { get; set; }
 	}
 }
